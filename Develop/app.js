@@ -53,6 +53,7 @@ newIntern = () => {
          } else if (response.role ==="Intern"){
              newIntern();
          } else {
+             console.log("Your team page has been created")
              checkIfDirectoryExist(OUTPUT_DIR);
              fs.writeFileSync(outputPath,render(employees), err => {
                  if (err) throw err;

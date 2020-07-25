@@ -28,7 +28,7 @@ const Questions = {
     {
         type: "input",
         name: "officeNumber",
-        message: "Please enter manager's office number: "
+        message: "Please enter manager's office phone number: "
   
     }
 
