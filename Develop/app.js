@@ -11,6 +11,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const Questions = require("./lib/Question");
 
 // new created employees array
 const employees = [];
@@ -20,7 +21,7 @@ const employees = [];
 
    inquirer.prompt(Question.managerQuestions) 
    .then((response) => {  
-    employees.push(new Manager(response.name, response.id, response.email, response.officeNumber))
+    employees.push(new Manager(response.name, response.id, response.email, response.officeNumber));
     newEmployee();
     });
 }
@@ -29,7 +30,7 @@ const employees = [];
 newEngr = ()=> {
 
         inquirer.prompt(Question.EngrQuestions)
-        .then((response) => { employees.push(new Engineer(response.name, response.id, response.email, response.github))
+        .then(response => { employees.push(new Engineer(response.name, response.id, response.email, response.github));
         newEmployee();
         });
 }
@@ -37,7 +38,7 @@ newEngr = ()=> {
 //creating intern function
 newIntern = () => {
     inquirer.prompt(Questions.InternQuestion)
-    .then((response) => {employees.push(new Intern(response.name, response.id, response.email, response.school))
+    .then(response => {employees.push(new Intern(response.name, response.id, response.email, response.school));
     newEmployee();
     });
 }
@@ -45,15 +46,8 @@ newIntern = () => {
 // creating the employee function and push the employee to the employees array 
 // then append it to the html file 
  newEmployee = () => {
-     inquirer.prompt({
-         type: "list",
-         name: "role",
-         choices: [
-             "Engineer",
-             "Intern",
-             "Don't add more employees"
-         ]
-     }).then((response) => {
+     console.log("--------------- ")
+     inquirer.prompt(Questions.addMoreEmployees).then( response => {
          if (response.role ==="Engineer"){
              newEngr();
          } else if (response.role ==="Intern"){
