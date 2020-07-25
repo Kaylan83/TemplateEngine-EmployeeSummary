@@ -3,8 +3,7 @@
 
 
 # Application Video
-[![Watch the video](/screenShots/clickToPlay.jpg)](https://drive.google.com/file/d/1zXSV_wau7iPmqiI1QownX7Gbvs6FCYpI/view)
-
+[![creating team video](/screenShots/clickToPlay.jpg)](https://drive.google.com/file/d/1zXSV_wau7iPmqiI1QownX7Gbvs6FCYpI/view)
 
 # Screen Shots
 ![screenShot1](/screenShots/screenShot1.JPG)
